@@ -1,0 +1,4 @@
+1) Think of Formula for hardness
+2) implement calcHardness
+3) Think of formula for hardness and how to optimize hardness
+4) Implement hardness optimization (this will be a major step, i believe around 50% of algorithm for track gen)
