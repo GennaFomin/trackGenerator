@@ -5,14 +5,13 @@ class Grid():
 
     # The grid will be represented as a 2d array, where we will have a 1 if we have a gate or flag on the
     # tile and 0 if it is blank.
-
     # Must say that this class is all at all technical and only supports Element class
-
-    def __init__(self, x, y, coordsGates, coordsFlags):
+    def __init__(self, x = 0, y = 0, coordsGates = [0], coordsFlags = [0]):
         self.x = x # number of gates
         self.y = y # number of flags
         self.coordsGates = coordsGates # 1d array representing gates places in the element
         self.coordsFlags = coordsFlags # 1d array representing flags places in the element
+
 
     # grid = [[0 for x in range(x + y + 2)] for y in range(2)]
 

@@ -1,9 +1,9 @@
-from Grid.grid import Grid
+from Element.element import Element
 
-x = Grid(10, 2, [1, 2, 3], [4, 5, 6])
-yx = x.getGrid()
-
-for i in range(len(yx)):
-    for j in range(len(yx[i])):
-        print(yx[i][j])
-    print('')
+splitS = Element(2, 2, [2, 3], [1, 4])
+x = splitS.fillGrid()
+for i in range(len(x)):
+    stringa = ""
+    for j in range(len(x[i])):
+        stringa += str(x[i][j])
+    print(stringa)
