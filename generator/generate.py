@@ -19,6 +19,9 @@ def getElems():
 # be just optimizing a function of two variables, where x = number of gates, y = number of flags
 # f(x, y) = hardness of track
 
+# Am i A joke to ya? It is a function of N variables, where n will be number of all distinct elements
+# (but not routes, routes will be chosen during generating the track)
+
 # def optimizeUsage(nGates, nFlags):
 
 
