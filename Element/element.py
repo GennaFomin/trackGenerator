@@ -32,8 +32,6 @@ class Element():
         Element.routes[repr(route)] = angle
         return
 
-
-
     def fillGrid(self):
 
         Element.grid.x = self.nGates
@@ -51,7 +49,13 @@ class Element():
     def setHardness(self, hardn):
         self.hardness = hardn
 
-    # The next gen of setHardness()
-    def calcHardness(self, degrees):
-        return degrees
+    # Here we need to fill route as a repr([x1, y1, ......., xn, yn]
+    # For now i decided to use some easy way to calc hardness, I found out that pretty much for all the hard elements,
+    # you get 540 degrees of turn, so we will normalize degrees by dividing on 540 and i think it is fine if some elem
+    # Will have more that 540, it will mean that it is HARD
+    # I will need to fine tune the formula later on, maybe add some multiplicative coefficient or change the divisor
+    # add different weight to gates and flags ( actually rather good idea )
+    def calcHardness(self, route):
+        return Element.routes[route] / 540
+
     # This function will be futher changes as I am still working on the formula for hardness.
